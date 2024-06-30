@@ -1,3 +1,10 @@
+"""
+projekt_1.py: první projekt do Engeto Online Python Akademie
+author: František Řezníček
+email: reznicek.frantisek@gmail.com
+discord: frantisekkosmo
+"""
+
 users = {
     "bob": "123",
     "ann": "pass123",
@@ -48,8 +55,8 @@ print("----------------------------------------")
 
 # Výběr textu
 try:
-    selection = int(input("Enter a number btw. 1 and 3 to select: "))
-    if selection < 1 or selection > 3:
+    vyber_textu = int(input("Enter a number between 1 and 3 to select: "))
+    if vyber_textu < 1 or vyber_textu > 3:
         print("Invalid number, terminating the program..")
         exit()
 except ValueError:
@@ -57,7 +64,7 @@ except ValueError:
     exit()
 
 # Analýza vybraného textu
-text = TEXTS[selection - 1]
+text = TEXTS[vyber_textu - 1]
 
 # Odstranění nežádoucích znaků a rozdělení textu na slova
 words = [word.strip('.,') for word in text.split()]
